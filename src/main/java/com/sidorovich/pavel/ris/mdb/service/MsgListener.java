@@ -24,7 +24,7 @@ import java.io.FileWriter;
 public class MsgListener implements MessageListener {
 
     private static final String FILE_PATH =
-            "D:\\BSUIR\\6 semester\\RIS\\Labwork2-6\\RIS_labworks\\src\\main\\resources\\output.txt";
+            "D:\\BSUIR\\6 semester\\RIS\\Labwork2-4\\src\\main\\resources\\output.txt";
     private static final String EXCLAMATION_MARK = "!";
     private static final String NEW_LINE = "\n";
 
