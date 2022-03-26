@@ -1,0 +1,6 @@
+plugins {
+    id 'java-library'
+}
+
+group 'com.sidorovich.pavel.lw9'
+version '1.0-SNAPSHOT'

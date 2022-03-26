@@ -1,0 +1,13 @@
+plugins {
+    id 'java-library'
+}
+
+group 'com.sidorovich.pavel.lw9'
+version '1.0-SNAPSHOT'
+
+dependencies {
+    implementation 'org.springframework.data:spring-data-jpa:2.6.1'
+    implementation 'org.postgresql:postgresql:42.3.2'
+    implementation 'com.h2database:h2:2.1.210'
+    implementation project(':persistence')
+}

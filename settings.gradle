@@ -1,0 +1,6 @@
+rootProject.name = 'Labwork9'
+
+include 'web'
+include 'persistence'
+include 'repository'
+include 'service'
