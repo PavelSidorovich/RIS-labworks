@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<ui:composition>
+    <div class="order-md-1 mb-4">
+        <h4 class="d-flex justify-content-between align-items-center mb-3">
+            <span class="text-muted">Discount filter</span>
+            <span class="badge bg-secondary rounded-pill">#{discountCodeController.discountCodes.size()}</span>
+        </h4>
+        <h:form>
+            <ul class="list-group mb-3 horizontal">
+                <li class="list-group-item">
+                    <div>
+                        <h6>Discount code</h6>
+                        <h:inputText styleClass="form-control" value="#{discountCodeController.filter.code}"/>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div>
+                        <h6>Discount value</h6>
+                        <h:inputText styleClass="form-control" value="#{discountCodeController.filter.discount}"/>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="d-grid">
+                        <h:commandButton styleClass="btn btn-outline-secondary"
+                                         action="discounts" value="Search"/>
+                    </div>
+                </li>
+            </ul>
+        </h:form>
+    </div>
+</ui:composition>
+
+</html>

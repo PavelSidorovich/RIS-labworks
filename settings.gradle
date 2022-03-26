@@ -1,0 +1,6 @@
+rootProject.name = 'RisLabwork5'
+
+include 'persistence'
+include 'repository'
+include 'service'
+include 'web'

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" http-equiv="X-UA-Conpatible"/>
+    <title>Discounts</title>
+    <h:outputStylesheet name="webjars/bootstrap/5.1.3/css/bootstrap.css"/>
+    <h:outputScript name="webjars/popper.js/2.9.3/cjs/popper.js"/>
+    <h:outputScript name="webjars/bootstrap/5.1.3/js/bootstrap.js"/>
+</h:head>
+
+<h:body>
+    <ui:include src="header.xhtml"/>
+    <div class="album py-5 bg-white">
+        <div class="container-fluid row">
+            <div class="col-md-3">
+                <ui:include src="discountFilter.xhtml"/>
+            </div>
+            <div class="col-md-9">
+                <h2>Discounts</h2>
+                <h:form>
+                    <h:commandLink value="Create discount" styleClass="btn btn-success" action="newDiscount"/>
+                </h:form>
+                <br/>
+                <div id="bonusCardContainer" class="row row-cols-1 row-cols-md-3 text-center">
+                    <ui:repeat value="#{discountCodeController.discountCodes}" var="item">
+                        <div class="col mb-4">
+                            <div class="card bg-success shadow">
+                                <h4 class="card-title text-center" style="font-size: 100px">#{item.discount}%</h4>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Discount code — <b>#{item.code}</b></li>
+                                    <li class="list-group-item">Gives a user #{item.discount}% discount</li>
+                                    <li class="list-group-item">
+                                        <h:form>
+                                            <div class="d-grid">
+                                                <h:commandButton value="Update" action="updateDiscount"
+                                                                 styleClass="btn btn-outline-primary">
+                                                    <f:setPropertyActionListener
+                                                            target="#{discountCodeController.toUpdate}"
+                                                            value="#{item}"/>
+                                                </h:commandButton>
+                                            </div>
+                                        </h:form>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <h:form>
+                                            <div class="d-grid">
+                                                <h:commandButton value="Delete"
+                                                                 action="#{discountCodeController.delete}"
+                                                                 styleClass="btn btn-outline-danger">
+                                                    <f:setPropertyActionListener
+                                                            target="#{discountCodeController.deleteCode}"
+                                                            value="#{item.code}"/>
+                                                </h:commandButton>
+                                            </div>
+                                        </h:form>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </ui:repeat>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ui:include src="footer.xhtml"/>
+</h:body>
+
+</html>

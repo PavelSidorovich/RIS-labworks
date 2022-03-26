@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+}
+
+allprojects {
+    apply plugin: 'java'
+
+    repositories {
+        mavenCentral()
+    }
+
+    ext {
+        jakartaApiVersion = '9.1.0'
+    }
+
+    dependencies {
+        compileOnly "jakarta.platform:jakarta.jakartaee-api:${jakartaApiVersion}"
+    }
+}
