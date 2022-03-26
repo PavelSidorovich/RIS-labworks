@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<users>
+    <user id="7">
+        <firstName>Pavel</firstName>
+        <isMale>true</isMale>
+        <identificationNumber>FG14GW</identificationNumber>
+        <homeTelephone>93-15-62</homeTelephone>
+        <city>
+            <cityName>Minsk</cityName>
+        </city>
+    </user>
+    <user id="8">
+        <firstName>Ivan</firstName>
+        <isMale>true</isMale>
+        <identificationNumber>AG15GW</identificationNumber>
+        <homeTelephone>92-45-41</homeTelephone>
+        <city>
+            <cityName>Borisov</cityName>
+        </city>
+    </user>
+    <user id="9">
+        <firstName>Stanislau</firstName>
+        <isMale>true</isMale>
+        <identificationNumber>AF16GW</identificationNumber>
+        <homeTelephone>76-27-45</homeTelephone>
+        <city>
+            <cityName>Vitebsk</cityName>
+        </city>
+    </user>
+    <user id="10">
+        <firstName>Svetlana</firstName>
+        <isMale>false</isMale>
+        <homeTelephone>90-41-11</homeTelephone>
+        <city>
+            <cityName>Brest</cityName>
+        </city>
+    </user>
+    <user id="11">
+        <firstName>Ekaterina</firstName>
+        <isMale>false</isMale>
+        <identificationNumber>AG55TW</identificationNumber>
+        <city>
+            <cityName>Malorita</cityName>
+        </city>
+    </user>
+</users>

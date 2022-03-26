@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="users" type="usersType"/>
+  <xs:complexType name="usersType">
+    <xs:sequence>
+      <xs:element type="userType" name="user" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="userType">
+    <xs:sequence>
+      <xs:element name="firstName" type="xs:string"/>
+      <xs:element name="isMale">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="true"/>
+            <xs:enumeration value="false"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="identificationNumber" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="([A-Z]{2}[\d]{2}[A-Z]{2})?"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="homeTelephone" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="([\d]{2}-[\d]{2}-[\d]{2})?"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="cityType" name="city"/>
+    </xs:sequence>
+    <xs:attribute type="xs:long" name="id"/>
+  </xs:complexType>
+  <xs:complexType name="cityType">
+    <xs:sequence>
+      <xs:element name="cityName"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

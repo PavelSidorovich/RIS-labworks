@@ -1,0 +1,51 @@
+[ {
+  "id" : 12,
+  "firstName" : "Pavel",
+  "identificationNumber" : "FG14GW",
+  "homeTelephone" : "93-15-62",
+  "city" : {
+    "id" : 11,
+    "cityName" : "Minsk"
+  },
+  "male" : true
+}, {
+  "id" : 13,
+  "firstName" : "Ivan",
+  "identificationNumber" : "AG15GW",
+  "homeTelephone" : "92-45-41",
+  "city" : {
+    "id" : 12,
+    "cityName" : "Borisov"
+  },
+  "male" : true
+}, {
+  "id" : 14,
+  "firstName" : "Stanislau",
+  "identificationNumber" : "AF16GW",
+  "homeTelephone" : "76-27-45",
+  "city" : {
+    "id" : 13,
+    "cityName" : "Vitebsk"
+  },
+  "male" : true
+}, {
+  "id" : 15,
+  "firstName" : "Svetlana",
+  "identificationNumber" : null,
+  "homeTelephone" : "90-41-11",
+  "city" : {
+    "id" : 14,
+    "cityName" : "Brest"
+  },
+  "male" : false
+}, {
+  "id" : 16,
+  "firstName" : "Ekaterina",
+  "identificationNumber" : "AG55TW",
+  "homeTelephone" : null,
+  "city" : {
+    "id" : 15,
+    "cityName" : "Malorita"
+  },
+  "male" : false
+} ]
