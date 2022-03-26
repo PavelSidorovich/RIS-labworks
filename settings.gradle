@@ -1,0 +1,3 @@
+rootProject.name = 'RIS_Labworks'
+
+include 'rmi'
