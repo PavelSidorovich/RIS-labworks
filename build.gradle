@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+    id 'war'
+}
+
+group 'com.sidorovich.pavel.ris'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = JavaVersion.VERSION_11
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    lombokVersion = '1.18.22'
+}
+
+dependencies {
+    implementation 'org.postgresql:postgresql:42.3.2'
+    implementation 'org.apache.logging.log4j:log4j-core:2.17.0'
+    implementation 'org.apache.logging.log4j:log4j-api:2.17.0'
+    implementation 'org.apache.logging.log4j:log4j-slf4j-impl:2.17.0'
+    implementation 'org.eclipse.persistence:eclipselink:3.1.0-M1'
+    implementation 'javax.servlet.jsp.jstl:jstl-api:1.2-rev-1'
+    implementation 'javax.servlet:jstl:1.2'
+
+    compileOnly 'jakarta.platform:jakarta.jakartaee-api:9.1.0'
+    compileOnly "org.projectlombok:lombok:${lombokVersion}"
+    annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+}
