@@ -1,0 +1,12 @@
+plugins {
+    id 'java-library'
+    id 'war'
+}
+
+ext {
+    lombokVersion = '1.18.22'
+}
+
+dependencies {
+    compileOnly "org.projectlombok:lombok:${lombokVersion}"
+}
